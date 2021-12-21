@@ -1,0 +1,21 @@
+name: 'Create A Discussion'
+description: Creates a new discussion using a template with front matter.
+runs:
+  using: node12
+  main: dist/index.js
+branding:
+  icon: alert-circle
+  color: gray-dark
+inputs:
+  filename:
+    description: The name of the file to use as the discussion template
+    default: .github/DISCUSSION_TEMPLATE.md
+    required: false
+  category:
+    description: The name of the category for the new discussion
+    required: true
+outputs:
+  number:
+    description: Number of the discussion that was created
+  url:
+    description: URL of the discussion that was created
